@@ -217,10 +217,16 @@
     font-weight: bold;
 }
 
+.skillPic {
+    max-height: 90%;
+    max-width: 10%;
+    aspect-ratio: 1/1;
+    float: left;
+}
 .skill {
     color: black;
     max-height: 100%;
-    width: 50%;
+    width: 40%;
     float: left;
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
