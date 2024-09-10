@@ -15,6 +15,7 @@
     margin: auto;
     height: 60%;
     aspect-ratio: 1/1;
+    border-radius: 40%;
 }
 
 .seperator {
@@ -222,6 +223,7 @@
     max-width: 10%;
     aspect-ratio: 1/1;
     float: left;
+    border-radius: 50%;
 }
 .skill {
     color: black;
@@ -246,6 +248,7 @@
 .fullLeftSideImage{
     max-width: 80%;
     max-height: 90%;
+    border-radius: 50%;
 }
 
 .skillTitle {
@@ -266,17 +269,11 @@
 }
 
 .project {
-    width: 10%;
+    width: 15%;
     aspect-ratio: 1/1;
     margin: 2.5%;
     background-color: powderblue;
     float: left;
-    padding: 2.5%;
-    border-radius: 10%;
-}
-
-.projectPic {
-    width: 80%;
-    height: 80%;
+    border-radius: 50%;
 }
 
