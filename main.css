@@ -37,19 +37,19 @@
 }
 
 .title {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 70px;
     color: #0081a7;
 }
 
 .paragraph {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 2vw;
     color: #0081a7;
 }
 .paragraphOffsetBlue {
     background-color: #fdfcdc;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 2vw;
     color: #0081a7;
     padding: 15px;
@@ -88,7 +88,7 @@
     position: absolute;
     top: 0;
     left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 30px;
     color: #0081a7;
 }
@@ -174,7 +174,7 @@
     text-align: left;
     margin-top: -10px;
     color: #0081a7;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .educationTimelineMiddle {
@@ -267,12 +267,12 @@
     width: 40%;
     float: left;
     margin: 0%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     padding-left: 2%;
 }
 .skillRating {
     font-weight: bold;
-    color: #0081a7;
+    color: #000000;
     width: 40%;
     float: left;
     text-align: right;
@@ -293,7 +293,7 @@
     height: 5%; 
     margin-top: 0%;
     margin-bottom: 5%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     padding: 2%;
     border-radius: 20px;
 }
