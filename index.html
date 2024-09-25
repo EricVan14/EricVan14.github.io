@@ -3,7 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <title>Eric van de Lande</title>
-        <p class="versionNumber">v1.3</p>
+        <p class="versionNumber">v1.4</p>
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     </head>
@@ -40,7 +40,7 @@
                         In my free time I like to practice my coding with side projects &#128296 like this website. I also love playing soccer &#9917 and cooking &#127859 . 
                     </p>
                     <p class="paragraph">
-                        Here is a link to my <span class="linkWord"><a href="./documents/ van de Lande Resume - August 2024.pdf" target=”_blank”>CV</a></span> &#128221 so 
+                        Here is a link to my <span class="linkWord"><a href="./documents/Eric van de Lande Resume - August 2024.pdf" target=”_blank”>CV</a></span> &#128221 so 
                         you can judge my experience &#129504 and see my other projects.
                     </p>
                 </div>
@@ -319,18 +319,304 @@
                 </div>
         
                 <div id="sticky">
-                    Coming Soon!
+                    <div class="stickyRow">
+                        <img class="skillPicBig" id="skillPicBig" src="./images/ToReplace.png" alt="Instagram Icon">
+                        <h2 class="skillTitle importantWord" id="skillTitle"></h2>    
+                    </div>
+                    <div class="stickyRow">
+                        <h3 class="skillTitleSmall" id="skillTitleSmall">Click a skill to see more!</h3>
+                    </div>
+                    <div class="stickyRow">
+                        <p id="skillDescription"></p> 
+                    </div>
+                    <div class="stickyRow">
+                        <h3 class="skillTitleSmall"></h3>
+                    </div>
+                    <div class="stickyRow" id="skillProjectPics">
+ 
+                    </div>
+                    
                 </div>
             </div>
             
             
         </div>
         <script>
+            const skillData = [
+                {
+                    title : "HTML/5",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/HtmlIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/course-booking-app", pic: "./images/CourseBookingProject.png"},
+                        { name: "E-Hotels Web App", link: "https://github.com/aghar11/CSI2132-eHotelsWebApp", pic: "./images/HotelProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/FUT_Draft", pic: "./images/FifaGameProject.png" },
+                    ]
+                },
+                {
+                    title : "CSS/3",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/CssIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "C++",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/CplusplusIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "JavaScript",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/JavaScriptIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Python",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/PythonIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Java",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/JavaIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Go",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/GoIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "TypeScript",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/TypescriptIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Angular",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/AngularIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "React",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/ReactIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "VueJs",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/VueIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Node.js & Express",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/NodeIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Spring Boot",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/SpringIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Continuous Integration & Delivery",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/CicdIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "MySQL",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/SqlIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "JSON & XML",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/JsonIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Github",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/GitHubIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Jira",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/JiraIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Azure Devops",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/AzureDevopsIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Wireshark",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/WiresharkIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Android Studio",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/AndroidStudioIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Apple OS",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/AppleIcon.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Artificial Intelligence & Machine Learning",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/ToReplace.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Full Stack Development",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/ToReplace.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Agile Software Development",
+                    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
+                    image: "./images/ToReplace.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                },
+                {
+                    title : "Amazon Web Services",
+                    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
+                    image: "./images/ToReplace.png",
+                    projects: [
+                        { name: "E-Hotels Web App", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png"},
+                        { name: "Datamining", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" },
+                        { name: "Fifa game", link: "https://github.com/EricVan14/HonorsProject/blob/main/Report.pdf", pic: "./images/TorProject.png" }
+                    ]
+                }
+            ]
+            
+            const skillPicBig = document.getElementById("skillPicBig");
+            const skillDescription = document.getElementById("skillDescription");
+            const skillTitle = document.getElementById("skillTitle");
+            const skillTitleSmall = document.getElementById("skillTitleSmall");
+            const skillProjectPics = document.getElementById("skillProjectPics");
             var i = 1;
             while(document.getElementById("skill" + i)){
                 const div = document.getElementById("skill" + i);
                 const rating = document.getElementById("ratingStars" + i);
                 const ratingDescription = document.getElementById("ratingDescription" + i);
+                const data = skillData[i-1];
                 div.addEventListener('mouseover', () => {
                     rating.style.color = 'rgb(248, 212, 7)';
                     ratingDescription.style.color = '#0081a7';
@@ -340,6 +626,21 @@
                     ratingDescription.style.color = '#fdfcdc';
                 });
                 i++;
+                div.addEventListener('click', function() { 
+                    skillTitle.innerHTML = data.title;
+                    skillDescription.innerHTML = data.description;
+                    skillPicBig.src = data.image;
+                    skillTitleSmall.innerHTML = ratingDescription.innerHTML;
+                    if(data.projects){
+                        var projectsHtml = '';
+                        data.projects.forEach(element => {
+                            projectsHtml += `<a class="stickyProjectHolder" href="` + element.link + `" target="_blank" ><img class="projectInSkill" src="`+ element.pic + `" alt="Instagram Icon"></img></a>`;
+                        });
+                        skillProjectPics.innerHTML = projectsHtml;
+                    }else{
+                        skillProjectPics.innerHTML = "";
+                    }
+                }, false);
             }
         </script>
 
