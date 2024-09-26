@@ -345,10 +345,9 @@
 }
 
 .projectInSkill{
-    width: 50%;
+    width: 5vw;
     aspect-ratio: 1/1;
     margin: 5%;
-    background-color: #fdfcdc;
     float: left;
     border-radius: 50%;
 }
